@@ -1,14 +1,30 @@
 <div class="card">
-  <p-table [columns]="cols" [value]="products">
+  <!-- PAGINATOR
+    [paginator]="true"
+    [rows]="5"
+    [rowsPerPageOptions]="[5, 10, 20]" -->
+
+  <!-- VIRUAL SCROLL
+    [scrollable]="true"
+    scrollHeight="260px"
+    [virtualScroll]="true"
+    [virtualScrollItemSize]="46" -->
+
+  <p-table
+    [columns]="cols"
+    [value]="products"
+    class="p-table"
+    [tableStyle]="{ 'min-width': '50rem', border: '1px solid #000' }"
+  >
     <ng-template pTemplate="header" let-columns>
-      <tr>
+      <tr style="height: 46px">
         <th *ngFor="let col of columns">
           {{ col.header }}
         </th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns>
-      <tr>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr style="height: 46px">
         <th *ngFor="let col of columns">
           {{ rowData[col.field] }}
         </th>

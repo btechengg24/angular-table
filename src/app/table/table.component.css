@@ -1,0 +1,4 @@
+.p-table th,
+.p-table-td {
+  border: 1px solid #ccc; /* Border for table cells */
+}

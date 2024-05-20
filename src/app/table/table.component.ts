@@ -27,12 +27,11 @@ export class Table implements OnInit {
 
   ngOnInit() {
     this.productService.getProducts().then((data) => {
-      console.log('inside', data);
+      // console.log('inside', data);
       this.products = data;
     });
-    console.log('products', this.products, typeof this.products);
-    // console.log('product', typeof (Product);
-
+    // console.log('products', this.products, typeof this.products);
+    
     this.cols = [
       { field: 'code', header: 'Code' },
       { field: 'name', header: 'Name' },
