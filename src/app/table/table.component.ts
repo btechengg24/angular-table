@@ -19,6 +19,7 @@ interface Column {
   templateUrl: './table.component.html',
   styleUrl: './table.component.css',
 })
+
 export class Table implements OnInit {
   products!: Product[];
 
